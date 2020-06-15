@@ -6,7 +6,7 @@ For more info, see subscription-sample.script.
 
 Add https://github.com/stepism/defold-mira-subscribe/archive/master.zip as a dependency in your game.project file.
 Fetch library using the main menu: Project -> Fetch Libraries.
-Enable the module adding local mira_cache = require("miraSubscribe.subscribe") at the beginning of your script.
+Enable the module adding local subscription = require("miraSubscribe.subscribe") at the beginning of your script.
 
 
 
