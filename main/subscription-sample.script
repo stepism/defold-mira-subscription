@@ -1,0 +1,24 @@
+local subscription = require("miraSubscription.subscription")
+
+
+function init(self)
+
+	-- subscribe
+	self.subscribe_id = subscription.subscribe(".", msg.url())
+	
+
+	-- notifycation
+	subscription.notify(".", hash("setup"), {text = "hello"})
+
+
+end
+
+function final(self)
+	subscription.remove(".", self.subscribe_id)
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("setup") then
+		print(message.text)
+	end
+end
